@@ -1,0 +1,73 @@
+{
+  "A174E17F-693A-416D-BB10-A169988ECF49" : {
+    "objectMetadataList" : [
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "rotacion_infinita",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "Skull"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "animacion",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "rotacion_infinita"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "animacion"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "E1B1B63B-6B00-45BB-AA67-B57CC9CE2E48" : {
+    "objectMetadataList" : [
+      [
+        "E1B1B63B-6B00-45BB-AA67-B57CC9CE2E48",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  }
+}
