@@ -7,16 +7,6 @@
 
 
 class SaltoAnimacion: Estado{
-    func finalizar() {
-        
-    }
-    
-    func reaccion(estimulo: String) {
-        
-    }
-    
-    
-    
     var contexto: (any MaquinaEstadosGenerica)? = nil
     
     static let nombre: String = "salto"
@@ -27,17 +17,17 @@ class SaltoAnimacion: Estado{
     func actualizar(_ evento: String){
         switch evento{
             
+        case "boton_cerrar":
+            print("Boton cerrar pulsado")
         default:
-            print("Estado salto.")
-            contexto?.realizar_cambio_estado(nombre_del_estado_nuevo: ReposoAnimacion.nombre)
-        }
-        
-        func finalizar(){
             
-        }
-        
-        func reaccion(estimulo: String){
-            
+            print("Saltando Guanajuato jeje")
+            contexto?.realizar_cambio_estado(nombre_del_estado_nuevo: CalacasDesaparecidas.nombre)
+            return
         }
     }
+    func finalizar(){}
+        
+    func reaccion(estimulo: String){}
+    
 }

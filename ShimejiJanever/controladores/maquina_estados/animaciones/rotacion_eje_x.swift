@@ -14,8 +14,19 @@ class RotacionX: Estado{
     }
     
     func actualizar(_ evento: String) {
-        print("me estoy mareando cumbia")
-        contexto?.realizar_cambio_estado(nombre_del_estado_nuevo: ReposoAnimacion.nombre)
+        print("hola mundo 4.")
+        switch evento{
+            
+        case "boton_cerrar":
+            print("Boton cerrar pulsado")
+        default:
+            
+            print("roto en x")
+            contexto?.enviar_peticion(Comando(tipo: .activar_animacion, carga_util: "rotacion_x"))
+            contexto?.realizar_cambio_estado(nombre_del_estado_nuevo: SonidoFeo.nombre)
+            return
+        }
+        
     }
     
     func finalizar() {

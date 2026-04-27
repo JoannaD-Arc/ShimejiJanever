@@ -108,33 +108,14 @@ extension ContentView {
             .foregroundStyle(Color.red)
             
             
-            Button("Da un saltito") {
-                controlador.actualizar_estados("da_un_salto")
+            Button("Activar Maquina Estados") {
+                controlador.actualizar_estados("boton_cerrar")
+               /* Task.detached(){
+                    await controlador.servicio_ar()
+                }*/
             }
             .foregroundStyle(Color.red)
             
-            
-            Button("Esfumar Calacas") {
-                controlador.actualizar_estados("esfumar_calacas")
-            }
-            .foregroundStyle(Color.red)
-            
-            
-            Button("Desesfumar Calacas") {
-                controlador.actualizar_estados("desesfumar_calacas")
-            }
-            .foregroundStyle(Color.red)
-            
-            
-            Button("Sonido Calaca") {
-                controlador.actualizar_estados("horn_sonido")
-            }
-            .foregroundStyle(Color.red)
-            
-            Button("Rotar Eje X") {
-                controlador.actualizar_estados("rotacion_x")
-            }
-            .foregroundStyle(Color.red)
         }
     }
     

@@ -14,8 +14,19 @@ class SonidoFeo: Estado{
     }
     
     func actualizar(_ evento: String) {
-        print("sonando cumbia")
-        contexto?.realizar_cambio_estado(nombre_del_estado_nuevo: ReposoAnimacion.nombre)
+
+        print("hola mundo 5.")
+        switch evento{
+            
+        case "boton_cerrar":
+            print("Boton cerrar pulsado")
+        default:
+            
+            print("cumbia_sonidera")
+            contexto?.enviar_peticion(Comando(tipo: .activar_animacion, carga_util: "sonido_feo"))
+            contexto?.realizar_cambio_estado(nombre_del_estado_nuevo: ReposoAnimacion.nombre)
+            return
+        }
     }
     
     func finalizar() {

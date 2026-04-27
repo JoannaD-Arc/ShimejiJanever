@@ -15,7 +15,19 @@ class CalacasDesaparecidas: Estado{
     
     func actualizar(_ evento: String) {
         print("Desaparecieron las calacas.")
-        contexto?.realizar_cambio_estado(nombre_del_estado_nuevo: ReposoAnimacion.nombre)
+        switch evento{
+            
+        case "boton_cerrar":
+            print("Boton cerrar pulsado")
+        default:
+            
+            print("Desaparezco")
+            contexto?.enviar_peticion(Comando(tipo: .activar_animacion, carga_util: "esfumar_calacas"))
+            contexto?.realizar_cambio_estado(nombre_del_estado_nuevo: CalacasAparecidas.nombre)
+            return
+        }
+        
+        
     }
     
     func finalizar() {

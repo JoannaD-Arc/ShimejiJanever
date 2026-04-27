@@ -14,9 +14,22 @@
 		66EEAFBE2F9C2C8000C3964D /* ShimejiJanever.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShimejiJanever.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FB35E5022F9F9DCE00A344C5 /* Exceptions for "ShimejiJanever" folder in "ShimejiJanever" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 66EEAFBD2F9C2C8000C3964D /* ShimejiJanever */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		66EEAFC02F9C2C8000C3964D /* ShimejiJanever */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FB35E5022F9F9DCE00A344C5 /* Exceptions for "ShimejiJanever" folder in "ShimejiJanever" target */,
+			);
 			path = ShimejiJanever;
 			sourceTree = "<group>";
 		};
@@ -262,6 +275,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShimejiJanever/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -295,6 +309,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShimejiJanever/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
