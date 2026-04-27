@@ -11,26 +11,37 @@ import mundo_virtual
 
 struct ContentView: View {
     @State var Alejamiento: Float = 0
+    @Environment(ControladorAplicacion.self) var controlador
+    
     var body: some View {
         ZStack{
             Rectangle()
                 .ignoresSafeArea()
-            RealityView{ raiz_de_escena in
-                if let modelo_cubo = try? await Entity(named: "Scene", in: mundo_virtualBundle){
-                    
-                    modelo_cubo.position.z = Float(Alejamiento)
-                    print(Alejamiento)
-                    raiz_de_escena.add(modelo_cubo)
+            VStack{
+                switch controlador.estado{
+                case .iniciando:
+                    Text("Cargando aplicación, por favor, espera.")
+                case .todo_cargado:
+                    RealityView{ raiz_de_escena in
+                        raiz_de_escena.add(controlador.raiz_escena)
+                    }
                 }
-                
             }
-            
         }
-        
-        Slider(value: $Alejamiento)
+        Slider(value: $Alejamiento, in: 0...5)
+            .onChange(of: Alejamiento) {
+                controlador.alejar_calacas(Alejamiento: Alejamiento)
+            }
+        Button{
+            Alejamiento = 5
+        }label:{
+            Text("Alejar Calacas")
+                .foregroundStyle(Color.red)
+        }
     }
 }
 
-#Preview {
+#Preview{
     ContentView()
+        .environment(ControladorAplicacion())
 }

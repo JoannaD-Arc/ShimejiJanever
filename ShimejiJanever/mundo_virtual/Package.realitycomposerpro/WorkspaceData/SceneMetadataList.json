@@ -3,6 +3,23 @@
     "objectMetadataList" : [
       [
         "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "Skull"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
         "Root",
         "rotacion_infinita",
         "Track"
@@ -14,7 +31,7 @@
       [
         "A174E17F-693A-416D-BB10-A169988ECF49",
         "Root",
-        "Skull"
+        "animacion"
       ],
       {
         "isExpanded" : true,
@@ -34,23 +51,6 @@
         "A174E17F-693A-416D-BB10-A169988ECF49",
         "Root",
         "rotacion_infinita"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "A174E17F-693A-416D-BB10-A169988ECF49",
-        "Root"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "A174E17F-693A-416D-BB10-A169988ECF49",
-        "Root",
-        "animacion"
       ],
       {
         "isExpanded" : true,

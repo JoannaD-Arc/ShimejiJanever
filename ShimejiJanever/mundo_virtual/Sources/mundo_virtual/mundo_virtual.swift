@@ -1,4 +1,15 @@
 import Foundation
 
 /// Bundle for the mundo_virtual project
-public let mundo_virtualBundle = Bundle.module
+public let MundoVirtual = Bundle.module
+ 
+public let escenario = "Scene"
+
+public let calacas = [
+    "Scene",
+    "Scene",
+    "Scene",
+    "Scene",
+    "Scene",
+    "Scene"
+]
