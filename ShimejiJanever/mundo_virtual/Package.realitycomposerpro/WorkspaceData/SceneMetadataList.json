@@ -21,8 +21,17 @@
       [
         "A174E17F-693A-416D-BB10-A169988ECF49",
         "Root",
-        "rotacion_infinita",
+        "saltito",
         "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "saltito"
       ],
       {
         "isExpanded" : true,
@@ -51,6 +60,16 @@
         "A174E17F-693A-416D-BB10-A169988ECF49",
         "Root",
         "rotacion_infinita"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "rotacion_infinita",
+        "Track"
       ],
       {
         "isExpanded" : true,

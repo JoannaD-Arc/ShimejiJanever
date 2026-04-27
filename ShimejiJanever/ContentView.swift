@@ -25,6 +25,11 @@ struct ContentView: View {
                     RealityView{ raiz_de_escena in
                         raiz_de_escena.add(controlador.raiz_escena)
                     }
+                    .onReceive(NotificationCenter.default.publisher(for: Notification.Name("RealityKit.NotificationTrigger"))){ notificacion in
+                        guard let notificacion = notificacion.userInfo?["RealityKit.NotificationTrigger.Identifier"] as? String else { return }
+                        
+                        controlador.escuchar_comportamiento(notificacion)
+                    }
                 }
             }
         }
@@ -37,6 +42,19 @@ struct ContentView: View {
         }label:{
             Text("Alejar Calacas")
                 .foregroundStyle(Color.red)
+        }
+        
+        Button{
+            controlador.ejecutar_comando(tipo: .activar_animacion, carga_util: "da_un_salto")
+        }label:{
+            Text("Da un saltito")
+                .foregroundStyle(Color.red)
+        }
+    }
+    
+    HStack{
+        ForEach(controlador.historial_comandos){ comando in
+            Text("Comando ejecutado \(comando.carga_util)")
         }
     }
 }

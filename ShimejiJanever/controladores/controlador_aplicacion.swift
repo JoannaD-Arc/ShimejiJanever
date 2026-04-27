@@ -13,10 +13,11 @@ import mundo_virtual
 @MainActor
 public class ControladorAplicacion {
     
-    public var escenario_calaca: Entity? = nil
+    //public var escenario_calaca: Entity? = nil
     public var raiz_escena: Entity = Entity()
     public var estado: EstadosAplicacion = .iniciando
     private var calacas_cargadas: [Entity] = []
+    public var historial_comandos: [Comando] = []
     
     init() {
         Task.detached(priority: .high){

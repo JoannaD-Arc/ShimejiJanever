@@ -10,7 +10,7 @@
 
 def Xform "Root"
 {
-    reorder nameChildren = ["Skull", "Rain", "Cloud", "animacion", "rotacion_infinita"]
+    reorder nameChildren = ["Skull", "Rain", "Cloud", "animacion", "rotacion_infinita", "saltito"]
     def "Skull" (
         active = true
         references = @Skull.usdz@
@@ -284,7 +284,10 @@ def Xform "Root"
 
     def RealityKitComponent "RCP_BehaviorsContainer"
     {
-        rel behaviors = </Root/OnAddedToScene>
+        rel behaviors = [
+            </Root/OnAddedToScene>,
+            </Root/OnNotification>,
+        ]
         uniform token info:id = "RCP.BehaviorsContainer"
     }
 
@@ -305,6 +308,97 @@ def Xform "Root"
             rel affectedObjects = </Root>
             rel animationLibraryKey = </Root/rotacion_infinita>
             rel animationLibraryKeyOverrideKey = </Root/OnAddedToScene/Trigger>
+            token info:id = "PlayTimeline"
+            int loops = 0
+            int performCount = 1
+            token type = "serial"
+        }
+    }
+
+    def RealityKitTimeline "saltito"
+    {
+        reorder nameChildren = ["Track", "Track2"]
+        def RealityKitTrack "Track"
+        {
+            reorder nameChildren = ["Transform_To", "Transform_To2", "Notification"]
+            def RealityKitAction "Transform_To"
+            {
+                string actionKind = "moveTo"
+                int blendLayer = 300
+                double duration = 1
+                uniform token info:id = "FEF9E587-45E5-4EDC-81E9-5D9E098B72B6"
+                float3 position = (0, 0.1, 0)
+                quatf rotation = (1, 0, 0, 0)
+                float3 scale = (1, 1, 1)
+                double startTime = 0
+                rel target = </Root/Skull>
+
+                def RealityKitStruct "transformMode"
+                {
+                    rel referenceEntity = </Root>
+                    token type = "parent"
+                }
+
+                def RealityKitStruct "timingFunction"
+                {
+                    token type = "easeInOut"
+                }
+            }
+
+            def RealityKitAction "Transform_To2"
+            {
+                string actionKind = "moveTo"
+                int blendLayer = 300
+                double duration = 1
+                uniform token info:id = "5FD78384-2D86-403B-95A4-ABB02F44C8EF"
+                float3 position = (0, 0, 0)
+                quatf rotation = (1, 0, 0, 0)
+                float3 scale = (1, 1, 1)
+                double startTime = 1.0008665511265165
+                rel target = </Root/Skull>
+
+                def RealityKitStruct "transformMode"
+                {
+                    rel referenceEntity = </Root>
+                    token type = "parent"
+                }
+
+                def RealityKitStruct "timingFunction"
+                {
+                    token type = "easeIn"
+                }
+            }
+
+            def RealityKitAction "Notification"
+            {
+                string actionKind = "notification"
+                double duration = 0
+                uniform token info:id = "5AB1E148-41D7-47F2-AFA5-B74BB06FA60D"
+                string notificationName = "finalizacion_salto"
+                double startTime = 2.0008665512265162
+                rel target = </Root>
+            }
+        }
+    }
+
+    def Preliminary_Behavior "OnNotification"
+    {
+        rel actions = </Root/OnNotification/Action>
+        uniform bool exclusive
+        rel triggers = </Root/OnNotification/Trigger>
+
+        def Preliminary_Trigger "Trigger"
+        {
+            rel affectedObjects = </Root>
+            string identifier = "da_un_salto"
+            token info:id = "Notification"
+        }
+
+        def Preliminary_Action "Action"
+        {
+            rel affectedObjects = </Root>
+            rel animationLibraryKey = </Root/saltito>
+            rel animationLibraryKeyOverrideKey = </Root/OnNotification/Trigger>
             token info:id = "PlayTimeline"
             int loops = 0
             int performCount = 1
