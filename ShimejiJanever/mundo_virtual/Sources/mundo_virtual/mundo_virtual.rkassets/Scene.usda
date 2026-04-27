@@ -10,13 +10,29 @@
 
 def Xform "Root"
 {
-    reorder nameChildren = ["Skull", "Rain", "Cloud", "animacion", "rotacion_infinita", "saltito"]
+    reorder nameChildren = ["Skull", "Rain", "Cloud", "PointLight", "animacion", "rotacion_infinita", "RCP_BehaviorsContainer", "OnAddedToScene", "saltito", "OnNotification", "desaparecer_calacas", "aparecer_calacas", "OnNotification2", "OnNotification3", "sonido_chido", "Horn", "rotacion_eje_1"]
     def "Skull" (
         active = true
         references = @Skull.usdz@
     )
     {
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "HierarchicalFade"
+        {
+            uniform token info:id = "RealityKit.HierarchicalFade"
+        }
+
+        def RealityKitComponent "AudioLibrary"
+        {
+            uniform token info:id = "RealityKit.AudioLibrary"
+
+            def RealityKitDict "resources"
+            {
+                string[] keys = ["Horn"]
+                rel values = </Root/Horn>
+            }
+        }
     }
 
     def Xform "Rain"
@@ -287,6 +303,10 @@ def Xform "Root"
         rel behaviors = [
             </Root/OnAddedToScene>,
             </Root/OnNotification>,
+            </Root/OnNotification2>,
+            </Root/OnNotification3>,
+            </Root/OnNotification4>,
+            </Root/OnNotification5>,
         ]
         uniform token info:id = "RCP.BehaviorsContainer"
     }
@@ -399,6 +419,256 @@ def Xform "Root"
             rel affectedObjects = </Root>
             rel animationLibraryKey = </Root/saltito>
             rel animationLibraryKeyOverrideKey = </Root/OnNotification/Trigger>
+            token info:id = "PlayTimeline"
+            int loops = 0
+            int performCount = 1
+            token type = "serial"
+        }
+    }
+
+    def RealityKitTimeline "desaparecer_calacas"
+    {
+        reorder nameChildren = ["Track", "Track2"]
+        def RealityKitTrack "Track"
+        {
+            reorder nameChildren = ["Hide", "Notification"]
+            def RealityKitAction "Notification"
+            {
+                string actionKind = "notification"
+                double duration = 0
+                uniform token info:id = "43B7A316-5C0C-4EA1-BDD1-D05BB26BA359"
+                string notificationName = "finalizacion_desaparicion"
+                double startTime = 1.0086580087580086
+                rel target = </Root>
+            }
+
+            def RealityKitAction "Hide"
+            {
+                string actionKind = "hide"
+                int blendLayer = 300
+                double duration = 1
+                uniform token info:id = "AD632092-7337-4BA2-B6AE-51BFCAEBD1CD"
+                double startTime = 0
+                rel target = </Root/Skull>
+
+                def RealityKitStruct "timingFunction"
+                {
+                    token type = "easeIn"
+                }
+            }
+        }
+    }
+
+    def RealityKitTimeline "aparecer_calacas"
+    {
+        reorder nameChildren = ["Track", "Track3"]
+        def RealityKitTrack "Track"
+        {
+            def RealityKitAction "Show"
+            {
+                string actionKind = "show"
+                int blendLayer = 300
+                double duration = 1
+                uniform token info:id = "B2869463-F5D6-4745-A91E-4D042A905E93"
+                double startTime = 0
+                rel target = </Root/Skull>
+
+                def RealityKitStruct "timingFunction"
+                {
+                    token type = "easeIn"
+                }
+            }
+
+            def RealityKitAction "Notification"
+            {
+                string actionKind = "notification"
+                double duration = 0
+                uniform token info:id = "8ED781F3-0B15-4F7B-996E-7E702BB48D62"
+                string notificationName = "finalizacion_aparicion"
+                double startTime = 1.0000000001000002
+                rel target = </Root>
+            }
+        }
+    }
+
+    def Preliminary_Behavior "OnNotification2"
+    {
+        rel actions = </Root/OnNotification2/Action>
+        uniform bool exclusive
+        rel triggers = </Root/OnNotification2/Trigger>
+
+        def Preliminary_Trigger "Trigger"
+        {
+            rel affectedObjects = </Root>
+            string identifier = "esfumar_calacas"
+            token info:id = "Notification"
+        }
+
+        def Preliminary_Action "Action"
+        {
+            rel affectedObjects = </Root>
+            rel animationLibraryKey = </Root/desaparecer_calacas>
+            rel animationLibraryKeyOverrideKey = </Root/OnNotification2/Trigger>
+            token info:id = "PlayTimeline"
+            int loops = 0
+            int performCount = 1
+            token type = "serial"
+        }
+    }
+
+    def Preliminary_Behavior "OnNotification3"
+    {
+        rel actions = </Root/OnNotification3/Action>
+        uniform bool exclusive
+        rel triggers = </Root/OnNotification3/Trigger>
+
+        def Preliminary_Trigger "Trigger"
+        {
+            rel affectedObjects = </Root>
+            string identifier = "desesfumar_calacas"
+            token info:id = "Notification"
+        }
+
+        def Preliminary_Action "Action"
+        {
+            rel affectedObjects = </Root>
+            rel animationLibraryKey = </Root/aparecer_calacas>
+            rel animationLibraryKeyOverrideKey = </Root/OnNotification3/Trigger>
+            token info:id = "PlayTimeline"
+            int loops = 0
+            int performCount = 1
+            token type = "serial"
+        }
+    }
+
+    def RealityKitTimeline "sonido_chido"
+    {
+        reorder nameChildren = ["Track", "Track2"]
+        def RealityKitTrack "Track2"
+        {
+            def RealityKitAction "Play_Audio"
+            {
+                string actionKind = "audio"
+                string audioResourceName = "Horn"
+                bool controlPlayback = 1
+                double duration = 2.3684166666666666
+                uniform token info:id = "E85101D9-DAAA-41F2-8D17-93CBBA8D5A54"
+                double startTime = 0
+                rel target = </Root>
+
+                def RealityKitStruct "handoffType"
+                {
+                }
+            }
+
+            def RealityKitAction "Notification"
+            {
+                string actionKind = "notification"
+                double duration = 0
+                uniform token info:id = "045FFC70-CA50-4743-98A2-AED5833FEF41"
+                string notificationName = "final_sonido"
+                double startTime = 2.3684166667666666
+                rel target = </Root>
+            }
+        }
+    }
+
+    def RealityKitAudioFile "Horn"
+    {
+        uniform asset file = @Old Car Horn - Sound Effect(HD).mp3@
+        uniform bool shouldLoop = 0
+    }
+
+    def Preliminary_Behavior "OnNotification4"
+    {
+        rel actions = </Root/OnNotification4/Action>
+        uniform bool exclusive
+        rel triggers = </Root/OnNotification4/Trigger>
+
+        def Preliminary_Trigger "Trigger"
+        {
+            rel affectedObjects = </Root>
+            string identifier = "horn_sonido"
+            token info:id = "Notification"
+        }
+
+        def Preliminary_Action "Action"
+        {
+            rel affectedObjects = </Root>
+            rel animationLibraryKey = </Root/sonido_chido>
+            rel animationLibraryKeyOverrideKey = </Root/OnNotification4/Trigger>
+            token info:id = "PlayTimeline"
+            int loops = 0
+            int performCount = 1
+            token type = "serial"
+        }
+    }
+
+    def RealityKitComponent "AudioLibrary"
+    {
+        uniform token info:id = "RealityKit.AudioLibrary"
+
+        def RealityKitDict "resources"
+        {
+            string[] keys = ["Horn"]
+            rel values = </Root/Horn>
+        }
+    }
+
+    def RealityKitTimeline "rotacion_eje_1"
+    {
+        reorder nameChildren = ["Track", "Track2"]
+        def RealityKitTrack "Track"
+        {
+            def RealityKitAction "Spin"
+            {
+                string actionKind = "spin"
+                int blendLayer = 400
+                double duration = 5
+                uniform token info:id = "5ECFAB13-572B-42E4-A8F0-135DFC23A9DA"
+                float3 localAxis = (1, 0, 0)
+                float revolutions = 10
+                double startTime = 0.012987012987012988
+                rel target = </Root/Skull>
+
+                def RealityKitStruct "timingFunction"
+                {
+                    token type = "linear"
+                }
+            }
+        }
+
+        def RealityKitTrack "Track2"
+        {
+            def RealityKitAction "Notification"
+            {
+                string actionKind = "notification"
+                uniform token info:id = "0A5FB925-CB30-416A-9246-F634FB1B2D5E"
+                string notificationName = "finalizar_eje_rotacionx"
+                double startTime = 5.012813112597176
+                rel target = </Root>
+            }
+        }
+    }
+
+    def Preliminary_Behavior "OnNotification5"
+    {
+        rel actions = </Root/OnNotification5/Action>
+        uniform bool exclusive
+        rel triggers = </Root/OnNotification5/Trigger>
+
+        def Preliminary_Trigger "Trigger"
+        {
+            rel affectedObjects = </Root>
+            string identifier = "rotacion_x"
+            token info:id = "Notification"
+        }
+
+        def Preliminary_Action "Action"
+        {
+            rel affectedObjects = </Root>
+            rel animationLibraryKey = </Root/rotacion_eje_1>
+            rel animationLibraryKeyOverrideKey = </Root/OnNotification5/Trigger>
             token info:id = "PlayTimeline"
             int loops = 0
             int performCount = 1

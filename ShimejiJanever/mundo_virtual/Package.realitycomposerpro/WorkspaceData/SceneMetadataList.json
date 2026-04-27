@@ -3,7 +3,64 @@
     "objectMetadataList" : [
       [
         "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "animacion"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "rotacion_eje_1",
+        "Track2"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "desaparecer_calacas",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "desaparecer_calacas"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
         "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "rotacion_infinita",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "aparecer_calacas"
       ],
       {
         "isExpanded" : true,
@@ -21,7 +78,7 @@
       [
         "A174E17F-693A-416D-BB10-A169988ECF49",
         "Root",
-        "saltito",
+        "aparecer_calacas",
         "Track"
       ],
       {
@@ -31,7 +88,7 @@
       [
         "A174E17F-693A-416D-BB10-A169988ECF49",
         "Root",
-        "saltito"
+        "rotacion_eje_1"
       ],
       {
         "isExpanded" : true,
@@ -40,7 +97,26 @@
       [
         "A174E17F-693A-416D-BB10-A169988ECF49",
         "Root",
-        "animacion"
+        "sonido_chido"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "rotacion_infinita_x",
+        "Track2"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "rotacion_infinita"
       ],
       {
         "isExpanded" : true,
@@ -59,7 +135,8 @@
       [
         "A174E17F-693A-416D-BB10-A169988ECF49",
         "Root",
-        "rotacion_infinita"
+        "sonido_chido",
+        "Track2"
       ],
       {
         "isExpanded" : true,
@@ -68,7 +145,46 @@
       [
         "A174E17F-693A-416D-BB10-A169988ECF49",
         "Root",
-        "rotacion_infinita",
+        "saltito",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "rotacion_eje_1",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "saltito"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "rotacion_infinita_x",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "Timeline",
         "Track"
       ],
       {

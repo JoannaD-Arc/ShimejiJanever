@@ -17,9 +17,13 @@ public class ControladorAplicacion {
     public var raiz_escena: Entity = Entity()
     public var estado: EstadosAplicacion = .iniciando
     private var calacas_cargadas: [Entity] = []
-    public var historial_comandos: [Comando] = []
+    var historial_comandos: [Comando] = []
+    var maquina_de_estados: [MaquinaEstadosGenerica] = [MaquinaEstadosAnimacion()]
     
     init() {
+        for indice in 0...maquina_de_estados.count - 1{
+            maquina_de_estados[indice].controlador_general = self as ProcesarComandos
+        }
         Task.detached(priority: .high){
             await self.cargar_calacas()
         }
@@ -53,6 +57,12 @@ public class ControladorAplicacion {
     func alejar_calacas(Alejamiento: Float){
         for calaca_cargada in calacas_cargadas {
             calaca_cargada.position.z = -Alejamiento
+        }
+    }
+    
+    func actualizar_estados(_ mensaje: String){
+        for maquina in maquina_de_estados{
+            maquina.actualizar(mensaje)
         }
     }
 }
