@@ -12,7 +12,7 @@ struct ShimejiJaneverApp: App {
     @State var controlador_general = ControladorAplicacion()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SeguimientoImagenes()
                 .environment(controlador_general)
         }
     }

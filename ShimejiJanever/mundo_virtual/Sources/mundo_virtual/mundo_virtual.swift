@@ -6,11 +6,6 @@ public let MundoVirtual = Bundle.module
 public let escenario = "Scene"
 
 public let calacas = [
-    "Scene",
-    "Scene",
-    "Scene",
-    "Scene",
-    "Scene",
     "Scene"
 ]
 

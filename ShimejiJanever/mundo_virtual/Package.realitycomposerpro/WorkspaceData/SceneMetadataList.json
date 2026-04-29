@@ -4,63 +4,17 @@
       [
         "A174E17F-693A-416D-BB10-A169988ECF49",
         "Root",
-        "animacion"
+        "Rain"
       ],
       {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "A174E17F-693A-416D-BB10-A169988ECF49",
-        "Root",
-        "rotacion_eje_1",
-        "Track2"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "A174E17F-693A-416D-BB10-A169988ECF49",
-        "Root",
-        "desaparecer_calacas",
-        "Track"
-      ],
-      {
-        "isExpanded" : true,
+        "disallowsFraming" : true,
+        "isExpanded" : false,
         "isLocked" : false
       },
       [
         "A174E17F-693A-416D-BB10-A169988ECF49",
         "Root",
         "desaparecer_calacas"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "A174E17F-693A-416D-BB10-A169988ECF49",
-        "Root"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "A174E17F-693A-416D-BB10-A169988ECF49",
-        "Root",
-        "rotacion_infinita",
-        "Track"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "A174E17F-693A-416D-BB10-A169988ECF49",
-        "Root",
-        "aparecer_calacas"
       ],
       {
         "isExpanded" : true,
@@ -77,9 +31,7 @@
       },
       [
         "A174E17F-693A-416D-BB10-A169988ECF49",
-        "Root",
-        "aparecer_calacas",
-        "Track"
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -88,16 +40,7 @@
       [
         "A174E17F-693A-416D-BB10-A169988ECF49",
         "Root",
-        "rotacion_eje_1"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "A174E17F-693A-416D-BB10-A169988ECF49",
-        "Root",
-        "sonido_chido"
+        "aparecer_calacas"
       ],
       {
         "isExpanded" : true,
@@ -116,7 +59,17 @@
       [
         "A174E17F-693A-416D-BB10-A169988ECF49",
         "Root",
-        "rotacion_infinita"
+        "PointLight"
+      ],
+      {
+        "disallowsFraming" : true,
+        "isExpanded" : false,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "rotacion_eje_1"
       ],
       {
         "isExpanded" : true,
@@ -135,17 +88,7 @@
       [
         "A174E17F-693A-416D-BB10-A169988ECF49",
         "Root",
-        "sonido_chido",
-        "Track2"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "A174E17F-693A-416D-BB10-A169988ECF49",
-        "Root",
-        "saltito",
+        "Timeline",
         "Track"
       ],
       {
@@ -155,17 +98,7 @@
       [
         "A174E17F-693A-416D-BB10-A169988ECF49",
         "Root",
-        "rotacion_eje_1",
-        "Track"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "A174E17F-693A-416D-BB10-A169988ECF49",
-        "Root",
-        "saltito"
+        "animacion"
       ],
       {
         "isExpanded" : true,
@@ -184,8 +117,117 @@
       [
         "A174E17F-693A-416D-BB10-A169988ECF49",
         "Root",
-        "Timeline",
+        "Cloud"
+      ],
+      {
+        "disallowsFraming" : true,
+        "isExpanded" : false,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "saltito"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "sonido_chido",
+        "Track2"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "rotacion_infinita",
         "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "sonido_chido"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "saltito",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "rotacion_infinita"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "rotacion_eje_1",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "rotacion_eje_1",
+        "Track2"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "aparecer_calacas",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A174E17F-693A-416D-BB10-A169988ECF49",
+        "Root",
+        "desaparecer_calacas",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "A7922EB1-8FB2-4F10-9312-21C5230A4CFD" : {
+    "objectMetadataList" : [
+      [
+        "A7922EB1-8FB2-4F10-9312-21C5230A4CFD",
+        "Root"
       ],
       {
         "isExpanded" : true,

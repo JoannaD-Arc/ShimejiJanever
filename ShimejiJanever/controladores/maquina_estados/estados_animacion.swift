@@ -8,7 +8,12 @@
 class MaquinaEstadosAnimacion: MaquinaEstadosGenerica {
     var controlador_general: (any ProcesarComandos)?
     
-    var estados_disponibles: [String: Estado] = [ReposoAnimacion.nombre: ReposoAnimacion(), SaltoAnimacion.nombre: SaltoAnimacion(), CalacasDesaparecidas.nombre: CalacasDesaparecidas(), CalacasAparecidas.nombre: CalacasAparecidas(), SonidoFeo.nombre: SonidoFeo(), RotacionX.nombre: RotacionX()]
+    var estados_disponibles: [String: Estado] = [ReposoAnimacion.nombre: ReposoAnimacion(),
+                                                 SaltoAnimacion.nombre: SaltoAnimacion(),
+                                                 CalacasDesaparecidas.nombre: CalacasDesaparecidas(),
+                                                 CalacasAparecidas.nombre: CalacasAparecidas(),
+                                                 SonidoFeo.nombre: SonidoFeo(),
+                                                 RotacionX.nombre: RotacionX()]
     
     var estado_actual: Estado? = nil
     

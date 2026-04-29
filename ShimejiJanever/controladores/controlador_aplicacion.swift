@@ -19,6 +19,7 @@ public class ControladorAplicacion {
     private var calacas_cargadas: [Entity] = []
     var historial_comandos: [Comando] = []
     var maquina_de_estados: [MaquinaEstadosGenerica] = [MaquinaEstadosAnimacion()]
+    var anclas_seguimiento: [AnchorEntity] = []
     
     init() {
         for indice in 0...maquina_de_estados.count - 1{
@@ -29,14 +30,14 @@ public class ControladorAplicacion {
         }
     }
     
-    func cargar_calacas()async{
+    func cargar_calacas() async {
         defer{
             estado = .todo_cargado
         }
         var contador_de_bucle_for = 0
         
         for calaca in calacas{
-            guard let calaca = try? await Entity(named: escenario, in: MundoVirtual) else {
+            guard let calaca = try? await Entity(named: calaca, in: MundoVirtual) else {
                 fatalError("No se ha podido cargar el escenario virtual. \(#function)")
             }
             
@@ -46,6 +47,10 @@ public class ControladorAplicacion {
             raiz_escena.addChild(calaca)
             calacas_cargadas.append(calaca)
             contador_de_bucle_for += 1
+            
+            let ancla = AnchorEntity(.image(group: "imagenes", name: "BG3"))
+            ancla.addChild(calaca)
+            anclas_seguimiento.append(ancla)
         }
         
         
