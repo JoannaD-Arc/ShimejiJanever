@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		66EEAFD92F9C3A6100C3964D /* mundo_virtual in Frameworks */ = {isa = PBXBuildFile; productRef = 66EEAFD82F9C3A6100C3964D /* mundo_virtual */; };
+		FB225F482FA8D8B0009F946A /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = FB225F472FA8D8B0009F946A /* FirebaseCore */; };
+		FB225F522FA8DD5D009F946A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FB225F512FA8DD5D009F946A /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB225F482FA8D8B0009F946A /* FirebaseCore in Frameworks */,
 				66EEAFD92F9C3A6100C3964D /* mundo_virtual in Frameworks */,
+				FB225F522FA8DD5D009F946A /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				66EEAFC02F9C2C8000C3964D /* ShimejiJanever */,
+				FB225F462FA8D8B0009F946A /* Frameworks */,
 				66EEAFBF2F9C2C8000C3964D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +66,13 @@
 				66EEAFBE2F9C2C8000C3964D /* ShimejiJanever.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FB225F462FA8D8B0009F946A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +96,8 @@
 			name = ShimejiJanever;
 			packageProductDependencies = (
 				66EEAFD82F9C3A6100C3964D /* mundo_virtual */,
+				FB225F472FA8D8B0009F946A /* FirebaseCore */,
+				FB225F512FA8DD5D009F946A /* FirebaseFirestore */,
 			);
 			productName = ShimejiJanever;
 			productReference = 66EEAFBE2F9C2C8000C3964D /* ShimejiJanever.app */;
@@ -115,6 +129,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				66EEAFD72F9C3A6100C3964D /* XCLocalSwiftPackageReference "ShimejiJanever/mundo_virtual" */,
+				FB225F452FA8D7D3009F946A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 66EEAFBF2F9C2C8000C3964D /* Products */;
@@ -368,10 +383,31 @@
 		};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		FB225F452FA8D7D3009F946A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.12.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		66EEAFD82F9C3A6100C3964D /* mundo_virtual */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = mundo_virtual;
+		};
+		FB225F472FA8D8B0009F946A /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB225F452FA8D7D3009F946A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		FB225F512FA8DD5D009F946A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB225F452FA8D7D3009F946A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
