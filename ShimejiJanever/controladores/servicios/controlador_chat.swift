@@ -15,7 +15,7 @@ class ServicioChat{
     
     func obtener_mensajes(){
         base_de_datos.collection("mensajes").order(by: "timestamp").addSnapshotListener { (snapshot, error) in
-            guard let documento = snapshot?.documents else { fatalError("No se han podido cargar los mensajes.")}
+            guard let documento = snapshot?.documents else {return}
             self.mensajes = documento.compactMap{elemento in
             try? elemento.data(as: Mensaje.self)}
         }
