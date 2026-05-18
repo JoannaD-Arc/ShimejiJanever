@@ -6,14 +6,12 @@
 //
 import SwiftUI
 
-
 extension ControladorAplicacion: ProcesarComandos{
     func ejecutar_comando(tipo: Comandos, carga_util: String) -> Bool {
         switch tipo{
         case .activar_animacion:
                 activar_comportamiento(carga_util)
-                self.historial_comandos.append(Comando(tipo: tipo, carga_util: carga_util))
-            
+            self.historial_comandos.append(Comando(tipo: .activar_animacion, carga_util: carga_util))
                 return true
         default:
             fatalError("[\(#file): \(#function)] Esto no ha sido implementado todavia. \(tipo)")
